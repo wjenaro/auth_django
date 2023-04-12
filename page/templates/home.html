@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jenaro</title>
+  <style>
+    /* Reset default margin and padding */
+    body, h1, h2, h3, p, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Set background color and font styles */
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header styles */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out; /* Add transition effect on hover */
+    }
+
+    .menu a:hover {
+      color: #0af; /* Change color on hover */
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .cta-buttons a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease-in-out; /* Add transition effect on hover */
+    }
+
+    .cta-buttons a:hover {
+      background-color: #0af; /* Change background color on hover */
+      color: #fff; /* Change text color on hover */
+    }
+
+    /* Body styles */
+    .body {
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .welcome {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    /* Footer styles */
+    .footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Jenaro</div>
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+    </nav>
+    <div class="cta-buttons">
+        <a href={% url 'login_user' %}>Login</a>
+        <a href={% url 'register' %}>Register</a>
+    </div>
+  </header>
+
+  <!-- Body -->
+  <div class="body">
+    <h1 class="welcome">Welcome to Jenaro site</h1>
+    <div class="cta-buttons">
+      <a href={% url 'login_user' %}>Login</a>
+      <a href={% url 'register' %}>Register</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>@Jenaro &copy; All rights reserved</p>
+  </footer>
+</body>
+</html>

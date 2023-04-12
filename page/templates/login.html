@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+  margin-top: 0;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #00ffbf;
+}
+
+a {
+  color: #00ffbf;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.username {
+  float: right;
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background-color: #008080;
+}
+
+/* Hover effect for footer copyright */
+footer:hover {
+  opacity: 0.8;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <span class="username">Welcome, {% if user.is_authenticated %}{{ user.username }}{% else %}Guest{% endif %}</span>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Login</h1>
+    <form>
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <label><input type="checkbox" name="remember" value="remember"> Remember me</label>
+      <button type="submit">Login</button>
+    </form>
+    <p>Not registered? <a href="#">Register</a></p>
+  </div>
+  <footer>
+    <p>@jenaro &copy; 2023. All rights reserved.</p>
+  </footer>
+</body>
+</html>
